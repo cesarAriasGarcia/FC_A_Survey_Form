@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	
+	<title> Survery form
+	</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">	
+
+<style>
+
+body{
+	font-family: Montserrat, sans-serif;
+	font-size: 14pt;
+	color: whitesmoke;
+	padding:3em 2%;
+	height: auto;
+	background-image: url(https://i.imgur.com/MerneRo.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+
+}
+
+#title{
+	font-size: 30pt;
+	color: black;
+	font-style: bold;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.62);
+	padding:1% 2%;
+	margin: auto;
+	width: 50%;
+}
+
+#description{
+	font-size: 25pt;
+	color: black;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.62);
+	padding:1% 2%;
+	margin-bottom: 1em;
+	margin: auto;
+	width: 50%;
+
+}
+
+#survey-form{
+background-color: rgba(21, 128, 0, 0.80);
+width: 50%;	
+border-radius: 5px;
+padding: 2%;
+margin: auto;
+margin-top:2em ;
+display: flex;
+flex-direction: column;
+}
+
+#name{
+font-family: Montserrat, sans-serif;
+font-size: 12pt;
+color: rgba(21, 128, 0, 0.71);	
+width: 95%;
+height: 2.5em;
+margin: center;
+border-radius: 5px;
+margin-bottom: 0.5em;
+}
+
+#name-label{
+padding-bottom: 0.2em;
+}
+
+#email{
+font-family: Montserrat, sans-serif;
+font-size: 12pt;
+color: rgba(21, 128, 0, 0.71);	
+width: 95%;
+height: 2.5em;
+margin: center;
+border-radius: 5px;
+margin-bottom: 0.8em;
+}
+
+#email-label{
+padding-bottom: 0.2em;
+}
+
+#number{
+font-family: Montserrat, sans-serif;
+font-size: 12pt;
+color: rgba(21, 128, 0, 0.71);	
+width: 95%;
+height: 2.5em;
+margin: center;
+border-radius: 5px;
+margin-bottom: 0.8em;
+}
+
+#number-label{
+padding-bottom: 0.2em;
+}
+
+#dropdown{
+font-family: Montserrat, sans-serif;
+font-size: 12pt;
+color: rgba(21, 128, 0, 0.71);	
+width: 95%;
+height: 2.5em;
+margin: center;
+border-radius: 5px;
+margin-bottom: 0.8em;
+}
+
+#dropdown-label{
+padding-bottom: 0.2em;
+}
+
+#textarea{
+font-family: Montserrat, sans-serif;
+font-size: 12pt;
+color: rgba(21, 128, 0, 0.71);
+font-family: Montserrat, sans-serif;
+width: 95%;
+height: 6em;
+margin-bottom: 2em;
+}
+
+#label-text-area{
+padding-bottom: 0.2em;
+}
+
+#submit{
+font-family: Montserrat, sans-serif;
+font-size: 14pt;
+width: 95%;
+height: 2em;
+}
+.form-submit-button {
+     font-family: Montserrat, sans-serif;
+     margin: 0.5em;
+     width: 95%;
+     background:green;
+     color:whitesmoke;
+     height:2.8em ;
+     /*border:1px solid #eee;*/
+     border-radius:2px;
+      /*box-shadow:5px 5px 5px #eee;*/
+     text-shadow:none;
+}
+.form-submit-button:hover {
+     font-family: Montserrat, sans-serif;
+     width: 95%;
+     background:greenyellow;
+     color: green;
+     height:2.5em ;
+     /*border:1px solid #eee;*/
+     border-radius:5px;
+     /*box-shadow:5px 5px 5px #eee;*/
+     text-shadow:none;
+} 
+
+hr{
+	color:lawngreen;
+	width: 81%;
+	margin: auto;
+	line-height: 0.3px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+	<h1 id="title">TREE-HUGGER SURVEY</h1>
+	<p id="description">Research about humans and trees.</p>
+	<form id="survey-form">
+		 <label  for="name" id="name-label">Name:</label><br>
+		 <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+		 <label for="email" id="email-label">eMail:</label><br>
+		 <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+		 <label for="number" id="number-label">How many times have you been in the forest last year?</label><br>
+		 <input type="number" id="number" name="number" min="0" max="50" placeholder="Enter a number between 0 an 50" required><br>
+		 <label for="dropdown" id="dropdown-label">How many inhabitants does your city have?</label><br>
+		 <select id="dropdown" name="dropdown">
+		 	<option value="1">Less than 5.000 inhabitants</option>
+		 	<option value="2">More than 5.000, less than 25.000 inhabitants</option>
+		 	<option value="3">More than 25.000, less than 100.000 inhabitants</option>
+		 	<option value="4">More than 100.000, less than 1M inhabitants</option>
+		 	<option value="5">More than 1M, less than 3M inhabitants</option>
+		 	<option value="5">More than 3M inhabitants</option>
+		 </select>	
+		 <br>
+		 <div> Choose your favorite forest<div>
+		 <input type="radio" id="forest1" name="fav_forest" value="TROPICAL">
+		 <label for="forest1">TROPICAL</label><br> 
+		 <input type="radio" id="forest2" name="fav_forest" value="TEMPERATE">
+		 <label for="forest2">TEMPERATE<label><br> 
+		 <input type="radio" id="forest3" name="fav_forest" value="BOREAL">
+		 <label for="forest3">BOREAL</label><br> 
+		 <input type="radio" id="forest4" name="fav_forest" value="PLANTATION">
+		 <label for="forest4">PLANTATION</label><br> 
+		 <br>
+		 <div> Check your known trees</div>
+		 <input type="checkbox" id="oak" name="known_tree1" value="OAK">
+		 <label for="oak">OAK</label><br>
+		 <input type="checkbox" id="cedar" name="known_tree2" value="CEDAR">
+		 <label for="cedar">CEDAR</label><br>
+		 <input type="checkbox" id="eucalyptus" name="known_tree3" value="EUCALYPTUS">
+		 <label for="eucalyptus">EUCALYPTUS</label><br>
+		 <input type="checkbox" id="elm" name="known_tree4" value="ELM">
+		 <label for="elm">ELM</label><br>
+		 <input type="checkbox" id="willow" name="known_tree5" value="WILLOW">
+		 <label for="willow">WILLOW</label><br>
+		 <br>
+
+		 <label for="textarea"id="label-text-area" name="text">Tell us about an experience in the forest</label><br>
+		 <textarea name="textarea" id="textarea"></textarea><br>
+		 <input type="submit" id="submit" class="form-submit-button"name="submit" value="Submit">
+	</form>
+
+</body>
